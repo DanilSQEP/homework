@@ -17,9 +17,9 @@ if (number % 2 === 0) {
 // 3. Выведите значение discount в консоль.
 // 4. *Дополнительное задание: перепишите задачу на switch-case.
 
-const age = +prompt("Введите ваш возраст:");
-const discount = age < 18 ? 10 : age > 65 ? 30 : 20;
-console.log(`Ваша скидка ${discount}%.`);
+// const age = +prompt("Введите ваш возраст:");
+// const discount = age < 18 ? 10 : age > 65 ? 30 : 20;
+// console.log(`Ваша скидка ${discount}%.`);
 
 const age = +prompt("Введите ваш возраст:");
 let discount = 20;
