@@ -16,21 +16,18 @@ console.log(users);
 // Задание 2.
 // Используя массив пользователей users из предыдущего задания, напишите функцию getUserAverageAge(users), которая возвращает средний возраст пользователей.
 const getUserAverageAge = (users) => {
-  let sum = 0,
-    count = 0;
-
+  let sum = 0;
   users.forEach((user) => {
     sum += user.age;
-    count++;
   });
-  return Math.round(sum / count);
+  return Math.round(sum / users.length);
 };
 console.log(getUserAverageAge(users));
 
 // Задание 3.
 // Используя массив пользователей users из предыдущего задания, напишите функцию getAllAdmins(users), которая возвращает массив всех администраторов.
 const getAllAdmins = (users) => {
-  admins = [];
+  let admins = [];
 
   users.forEach((user) => {
     if (user.isAdmin) {
@@ -46,17 +43,15 @@ const arr = [1, 2, 3, 4, 5, 6];
 
 const first = (arr, n = 1) => {
   if (arr.length < n) {
-    console.error(`Аргумент n не может быть больше длины массива: ${arr.length}.`);
+    console.error(
+      `Аргумент n(${n}) не может быть больше длины массива: ${arr.length}.`,
+    );
     return;
   }
 
-  if (n === 0) {
-    return [];
-  }
-
   const newArray = new Array(n);
-  for (let i = 0; i < newArray.length; i++) {
-    newArray[i] = arr[i]
+  for (let i = 0; i < n; i++) {
+    newArray[i] = arr[i];
   }
   return newArray;
 };
